@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../car"
+		},
+		{
+			"path": "../sienna9"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "emilio"
+	}
+}

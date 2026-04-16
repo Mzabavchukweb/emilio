@@ -1,0 +1,176 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://emiliorestauracja.com/#website",
+      "url": "https://emiliorestauracja.com",
+      "name": "Restauracja Emilio",
+      "description": "Autentyczna rodzinna kuchnia włoska w Szczecinie od 2015 roku",
+      "inLanguage": "pl-PL",
+      "publisher": {
+        "@id": "https://emiliorestauracja.com/#organization"
+      }
+    },
+    {
+      "@type": ["Restaurant", "LocalBusiness", "FoodEstablishment"],
+      "@id": "https://emiliorestauracja.com/#organization",
+      "name": "Restauracja Emilio",
+      "alternateName": ["Emilio Restauracja", "Emilio Szczecin", "Restauracja Włoska Emilio"],
+      "description": "Autentyczna rodzinna kuchnia włoska w sercu Szczecina. Pasta fresca, owoce morza, risotto, włoskie wina. Catering, sala eventowa Casa di Emilio, Bistro by Emilio.",
+      "url": "https://emiliorestauracja.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://emiliorestauracja.com/images/logo-white.png"
+      },
+      "image": [
+        "https://emiliorestauracja.com/images/hero-bg.webp",
+        "https://emiliorestauracja.com/images/emilio-1.jpg",
+        "https://emiliorestauracja.com/images/restaurant.jpg",
+        "https://emiliorestauracja.com/images/dinner.jpg"
+      ],
+      "telephone": "+48508224177",
+      "email": "restauracjaemilio@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ul. Jana Pawła II 43",
+        "addressLocality": "Szczecin",
+        "addressRegion": "zachodniopomorskie",
+        "postalCode": "70-415",
+        "addressCountry": "PL"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.4285,
+        "longitude": 14.553
+      },
+      "hasMap": "https://maps.google.com/?q=Restauracja+Emilio+ul.+Jana+Pawła+II+43+Szczecin",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+          "opens": "13:00",
+          "closes": "22:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Friday", "Saturday"],
+          "opens": "13:00",
+          "closes": "23:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "13:00",
+          "closes": "20:00"
+        }
+      ],
+      "servesCuisine": ["Italian", "Mediterranean", "European"],
+      "priceRange": "$$",
+      "paymentAccepted": ["Cash", "Credit Card", "Debit Card"],
+      "currenciesAccepted": "PLN",
+      "acceptsReservations": true,
+      "menu": "https://emiliorestauracja.com/pages/menu.html",
+      "hasMenu": {
+        "@type": "Menu",
+        "name": "Menu Restauracji Emilio",
+        "hasMenuSection": [
+          {
+            "@type": "MenuSection",
+            "name": "Pasta",
+            "description": "Ręcznie robiona pasta fresca z autentycznymi włoskimi sosami"
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Risotto",
+            "description": "Kremowe risotto z najlepszymi składnikami z Włoch"
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Owoce morza",
+            "description": "Świeże owoce morza — krewetki, kalmary, przegrzebki"
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Desery",
+            "description": "Tiramisù, panna cotta, cannoli siciliani"
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Wina",
+            "description": "Wyselekcjonowane wina włoskie — Chianti, Barolo, Brunello, Amarone"
+          }
+        ]
+      },
+      "sameAs": [
+        "https://www.facebook.com/emiliorestauracja",
+        "https://www.instagram.com/restauracjaemilio/"
+      ],
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Szczecin"
+        },
+        {
+          "@type": "State",
+          "name": "zachodniopomorskie"
+        }
+      ],
+      "foundingDate": "2015",
+      "keywords": "restauracja włoska Szczecin, kuchnia włoska, pasta, pizza, owoce morza, catering Szczecin, sala eventowa Szczecin"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Gdzie znajduje się Restauracja Emilio w Szczecinie?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Restauracja Emilio znajduje się przy ul. Jana Pawła II 43, 70-415 Szczecin. To centrum miasta, łatwo dostępne komunikacją miejską i samochodem."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Jakie są godziny otwarcia Restauracji Emilio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Restauracja Emilio jest otwarta: poniedziałek–czwartek 13:00–22:00, piątek–sobota 13:00–23:00, niedziela 13:00–20:00."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy Restauracja Emilio oferuje catering w Szczecinie?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tak, Restauracja Emilio oferuje profesjonalny catering włoski na terenie Szczecina. Obsługujemy wesela, imprezy firmowe, urodziny i rocznice. Menu jest indywidualnie komponowane. Kontakt: 508 224 177."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy można zarezerwować stolik w Restauracji Emilio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tak, rezerwacje przyjmujemy telefonicznie pod numerem +48 508 224 177 lub mailowo: restauracjaemilio@gmail.com."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czym jest Casa di Emilio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Casa di Emilio to elegancka sala eventowa w Szczecinie na do 60 osób. Idealna na wesela, urodziny, konferencje i spotkania firmowe. Cena od 150 PLN za osobę, obejmuje catering i obsługę kelnerską."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Gdzie znajduje się Bistro by Emilio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bistro by Emilio mieści się w Morskim Centrum Nauki przy ul. Nad Duńczycą 1 w Szczecinie. Oferujemy włoskie lunche, kawy i desery z widokiem na Odrę."
+          }
+        }
+      ]
+    }
+  ]
+}
