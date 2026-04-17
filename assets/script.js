@@ -87,12 +87,27 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ── Form ── */
   const form = document.getElementById('rezForm');
   if (form) {
-    form.addEventListener('submit', e => {
+    const btn = form.querySelector('button[type="submit"]');
+    const origBtnText = btn ? btn.textContent : '';
+    form.addEventListener('submit', async e => {
       e.preventDefault();
-      const d = new FormData(form);
-      const subj = `Rezerwacja – ${d.get('name')} – ${d.get('date')}`;
-      const body = `Imię: ${d.get('name')}\nData: ${d.get('date')}\nGodzina: ${d.get('time')}\nGoście: ${d.get('guests')}\nTelefon: ${d.get('phone')}\n${d.get('msg') ? 'Uwagi: ' + d.get('msg') : ''}`;
-      location.href = `mailto:restauracjaemilio@gmail.com?subject=${encodeURIComponent(subj)}&body=${encodeURIComponent(body)}`;
+      if (btn) { btn.disabled = true; btn.textContent = 'Wysyłam…'; }
+      try {
+        const res = await fetch('https://formsubmit.co/ajax/restauracjaemilio@gmail.com', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(Object.fromEntries(new FormData(form)))
+        });
+        const data = await res.json();
+        if (data.success === 'true' || data.success === true) {
+          form.innerHTML = '<div style="text-align:center;padding:32px 16px"><h3 style="margin:0 0 8px">Dziękujemy!</h3><p style="margin:0;opacity:.8">Wiadomość wysłana. Skontaktujemy się wkrótce.</p></div>';
+        } else {
+          throw new Error(data.message || 'Błąd wysyłki');
+        }
+      } catch (err) {
+        if (btn) { btn.disabled = false; btn.textContent = origBtnText; }
+        alert('Nie udało się wysłać. Zadzwoń: 508 224 177 lub napisz na restauracjaemilio@gmail.com');
+      }
     });
   }
 });
